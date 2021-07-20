@@ -1,0 +1,85 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f6f6f6;
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.submit-button {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* tables */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid rgb(204,204,204);
+}
+
+/* header */
+
+#header {
+    margin-top: 2%;
+    margin-bottom : 2%;
+    font-family: "Yantramanav", sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+/* filter */
+
+.filter_advanced {
+    text-transform: capitalize;
+    width: 80%;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.filter_advanced .condition a {
+    display: inline;
+}
+
+.filter_advanced th {
+    background-color: rgb(241, 246, 247);
+}
+
+.results_table {
+    width: 80%;
+    text-transform: capitalize;
+}
+
+.condition a {
+    padding: 1%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.condition a.active {
+    background-color: #666;
+    color: white;
+}
+
+.dropdown .btn {
+    text-decoration: none;
+}
+
+input[id="myInput"] {
+    margin-bottom: 5%;
+}
