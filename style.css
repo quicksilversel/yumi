@@ -80,6 +80,11 @@ table, th, td {
     text-decoration: none;
 }
 
-input[id="myInput"] {
+input[id="myInput1"], input[id="myInput2"], input[id="myInput3"], input[id="myInput4"], input[id="myInput5"]  {
     margin-bottom: 5%;
+}
+
+.dropdown-menu {
+    height: 400px;
+    overflow-y: auto;
 }
