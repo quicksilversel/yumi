@@ -80,6 +80,8 @@ $(document).ready(function() {
   var $quantity = 0;
   var $cost = 0;
   var $totalWeight = 0;
+  var $additional_cost = 0;
+  var $totalCost = 0;
 
   // get 商品
   $(".商品").on('click', 'li a', function(){
@@ -89,6 +91,7 @@ $(document).ready(function() {
   //　get 行き先
   $(".行き先").on('click', 'li a', function(){
     $distance = parseInt($(this).data('id'));
+    $additional = $(this).data('add');
   });
 
   // return shipping fee
@@ -98,11 +101,9 @@ $(document).ready(function() {
     $quantity = parseInt($('#数量').val());
 
     // calculate total weight
-    $totalWeight = parseFloat($quantity * $weight);
-    // round down total weight
-    $totalWeight = Math.floor($totalWeight);
+    $totalWeight = parseFloat($quantity * $weight).toFixed(4);
 
-    // calculate cost by finding distance first, then filter by weight
+    // calculate cost by distance and weight
     if($distance == 50) {
       switch (true) {
         case ($totalWeight < 20):
@@ -3930,10 +3931,268 @@ $(document).ready(function() {
       }
     }
 
-    // return cost 
-    console.log('total weight is' + $totalWeight);
-    console.log('distance is ' + $distance);
+    // additional cost
+    if($additional == "none") {
+      $additional_cost = 0;
+    }
+    // 東京、大阪
+    else if ($additional == "one"){
+      switch (true) {
+        case ($totalWeight < 20):
+          $additional_cost = 100;
+          break;
+        case($totalWeight < 30):
+          $additional_cost = 100;
+          break;
+        case($totalWeight < 40):
+          $additional_cost = 100;
+          break;
+        case($totalWeight < 60):
+          $additional_cost = 100;
+          break;
+        case($totalWeight < 80):
+          $additional_cost = 200;
+          break;
+        /* */
+        case($totalWeight < 100):
+          $additional_cost = 200;
+          break;
+        case($totalWeight < 120):
+          $additional_cost = 200;
+          break;
+        case($totalWeight < 140):
+          $additional_cost = 300;
+          break;
+        case($totalWeight < 160):
+          $additional_cost = 300;
+          break;
+        case($totalWeight < 180):
+          $additional_cost = 400;
+          break;
+        /* */
+        case($totalWeight < 200):
+          $additional_cost = 400;
+          break;
+        case($totalWeight < 250):
+          $additional_cost = 400;
+          break;
+        case($totalWeight < 300):
+          $additional_cost = 500;
+          break;
+        case($totalWeight < 350):
+         $additional_cost = 600;
+          break;
+        case($totalWeight < 400):
+          $additional_cost = 700;
+          break;
+        /* */
+        case($totalWeight < 450):
+         $additional_cost = 800;
+          break;
+        case($totalWeight < 500):
+         $additional_cost = 900;
+          break;
+        case($totalWeight < 550):
+          $additional_cost = 1000;
+          break;
+        case($totalWeight < 600):
+          $additional_cost = 1100;
+          break;
+        case($totalWeight < 650):
+          $additional_cost = 1200;
+          break;
+        /* */
+        case($totalWeight < 700):
+          $additional_cost = 1300;
+          break;
+        case($totalWeight < 750):
+          $additional_cost = 1400;
+          break;
+        case($totalWeight < 800):
+          $additional_cost = 1500;
+          break;
+        case($totalWeight < 850):
+         $additional_cost = 1600;
+          break;
+        case($totalWeight < 900):
+          $additional_cost = 1700;
+          break;
+        /* */
+        case($totalWeight < 950):
+          $additional_cost = 1800;
+          break;
+        case($totalWeight < 1000):
+          $additional_cost = 1900;
+          break;
+        case($totalWeight < 1100):
+          $additional_cost = 2000;
+          break;
+        case($totalWeight < 1200):
+         $additional_cost = 2200;
+          break;
+        case($totalWeight < 1300):
+          $additional_cost = 2400;
+          break;
+        /* */
+        case($totalWeight < 1400):
+          $additional_cost = 2600;
+          break;
+        case($totalWeight < 1500):
+          $additional_cost = 2800;
+          break;
+        case($totalWeight < 1600):
+          $additional_cost = 3000;
+          break;
+        case($totalWeight < 1700):
+          $additional_cost = 3200;
+          break;
+        case($totalWeight < 1800):
+          $additional_cost = 3400;
+          break;
+        /* */
+        case($totalWeight < 1900):
+          $additional_cost = 3600;
+          break;
+        case($totalWeight < 2000):
+          $additional_cost = 3800;
+          break;
+        case(2000 <= $totalWeight):
+          $additional_cost = 4000;
+          break;
+        default:
+          break;
+      }
+    }
+    else{
+      switch (true) {
+        case ($totalWeight < 20):
+          $additional_cost = 70;
+          break;
+        case($totalWeight < 30):
+          $additional_cost = 70;
+          break;
+        case($totalWeight < 40):
+          $additional_cost = 70;
+          break;
+        case($totalWeight < 60):
+          $additional_cost = 70;
+          break;
+        case($totalWeight < 80):
+          $additional_cost = 140;
+          break;
+        /* */
+        case($totalWeight < 100):
+          $additional_cost = 140;
+          break;
+        case($totalWeight < 120):
+          $additional_cost = 140;
+          break;
+        case($totalWeight < 140):
+          $additional_cost = 210;
+          break;
+        case($totalWeight < 160):
+          $additional_cost = 210;
+          break;
+        case($totalWeight < 180):
+          $additional_cost = 280;
+          break;
+        /* */
+        case($totalWeight < 200):
+          $additional_cost = 280;
+          break;
+        case($totalWeight < 250):
+          $additional_cost = 280;
+          break;
+        case($totalWeight < 300):
+          $additional_cost = 350;
+          break;
+        case($totalWeight < 350):
+          $additional_cost = 420;
+          break;
+        case($totalWeight < 400):
+          $additional_cost = 490;
+          break;
+        /* */
+        case($totalWeight < 450):
+         $additional_cost = 560;
+          break;
+        case($totalWeight < 500):
+         $additional_cost = 630;
+          break;
+        case($totalWeight < 550):
+          $additional_cost = 700;
+          break;
+        case($totalWeight < 600):
+          $additional_cost = 770;
+          break;
+        case($totalWeight < 650):
+          $additional_cost = 840;
+          break;
+        /* */
+        case($totalWeight < 700):
+          $additional_cost = 910;
+          break;
+        case($totalWeight < 750):
+          $additional_cost = 980;
+          break;
+        case($totalWeight < 800):
+          $additional_cost = 1050;
+          break;
+        case($totalWeight < 850):
+          $additional_cost = 1120;
+          break;
+        case($totalWeight < 900):
+          $additional_cost = 1190;
+          break;
+        /* */
+        case($totalWeight < 950):
+          $additional_cost = 1260;
+          break;
+        case($totalWeight < 1000):
+          $additional_cost = 1330;
+          break;
+        case($totalWeight < 1100):
+          $additional_cost = 1400;
+          break;
+        case($totalWeight < 1200):
+          $additional_cost = 1540;
+          break;
+        case($totalWeight < 1300):
+          $additional_cost = 1680;
+          break;
+        /* */
+        case($totalWeight < 1400):
+          $additional_cost = 1820;
+          break;
+        case($totalWeight < 1500):
+          $additional_cost = 1960;
+          break;
+        case($totalWeight < 1600):
+          $additional_cost = 2100;
+          break;
+        case($totalWeight < 1700):
+          $additional_cost = 2240;
+          break;
+        case($totalWeight < 1800):
+          $additional_cost = 2380;
+          break;
+        /* */
+        case($totalWeight < 1900):
+          $additional_cost = 2520;
+          break;
+        case($totalWeight < 2000):
+          $additional_cost = 2660;
+          break;
+        case(2000 <= $totalWeight):
+          $additional_cost = 2800;
+          break;
+        default:
+          break;
+      }
+    }
 
-    $('.shipping-fee').html($cost);
+    $totalCost = $cost + $additional_cost
+    // return cost 
+    $('.shipping-fee').html('総重量は' + $totalWeight + 'kg、運賃は' + $totalCost +'円です。(割増料' + $additional_cost + '円）');
   });
 });

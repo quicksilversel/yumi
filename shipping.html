@@ -14,17 +14,15 @@
     <script type="text/javascript" src="scripts/index.js"></script>
     <!-- css -->
     <link href="style.css" type="text/css", rel="stylesheet">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <!-- favicon -->
 
 </head>
 <body>
+    <!-- navbar -->
+    
     <!-- filter table -->
     <h1 class="text-center" id="header">Shipping fee</h1>
     <table class="text-center filter_advanced">
@@ -38,7 +36,7 @@
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">部品
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu 商品">
-                                <input class="form-control" id="myInput4" type="text" placeholder="Search..">
+                                <input class="form-control" id="myInput4" type="text" placeholder="検索">
                                 <!-- M5 -->
                                 <li><a href="#" data-id="0.00252" data-type="商品" class="stat">M5X8</a></li>
                                 <li><a href="#" data-id="0.00277" data-type="商品" class="stat">M5X10</a></li>
@@ -424,194 +422,193 @@
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">行き先
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu 行き先">
-                                <input class="form-control" id="myInput5" type="text" placeholder="Search..">
+                                <input class="form-control" id="myInput5" type="text" placeholder="検索">
                                 <!-- distance == 50 -->
-                                <li><a href="#" data-id="50" data-type="行き先" class="stat">大阪</a></li>
-                                <li><a href="#" data-id="50" data-type="行き先" class="stat">茨木</a></li>
-                                <li><a href="#" data-id="50" data-type="行き先" class="stat">神戸</a></li>
-                                <li><a href="#" data-id="50" data-type="行き先" class="stat">京都南</a></li>
-                                <li><a href="#" data-id="50" data-type="行き先" class="stat">奈良</a></li>
+                                <li><a href="#" data-id="50" data-type="行き先" class="stat" data-add="one">大阪</a></li>
+                                <li><a href="#" data-id="50" data-type="行き先" class="stat" data-add="two">東大阪</a></li>
+                                <li><a href="#" data-id="50" data-type="行き先" class="stat" data-add="none">茨木</a></li>
+                                <li><a href="#" data-id="50" data-type="行き先" class="stat" data-add="two">神戸</a></li>
+                                <li><a href="#" data-id="50" data-type="行き先" class="stat" data-add="none">京都南</a></li>
+                                <li><a href="#" data-id="50" data-type="行き先" class="stat" data-add="none">奈良</a></li>
                                 <!-- distance == 100 -->
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">和歌山</a></li>
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">亀岡</a></li>
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">京都</a></li>
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">滋賀</a></li>
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">大津</a></li> 
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">上野</a></li>
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">明石</a></li>
-                                <li><a href="#" data-id="100" data-type="行き先" class="stat">徳島</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">和歌山</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">亀岡</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="two">京都</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">滋賀</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">大津</a></li> 
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">上野</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">明石</a></li>
+                                <li><a href="#" data-id="100" data-type="行き先" class="stat" data-add="none">徳島</a></li>
                                 <!-- distance == 150 -->
-                                <li><a href="#" data-id="150" data-type="行き先" class="stat">垂井</a></li>
-                                <li><a href="#" data-id="150" data-type="行き先" class="stat">彦根</a></li>
-                                <li><a href="#" data-id="150" data-type="行き先" class="stat">近江</a></li>
-                                <li><a href="#" data-id="150" data-type="行き先" class="stat">福知山</a></li>
+                                <li><a href="#" data-id="150" data-type="行き先" class="stat" data-add="none">垂井</a></li>
+                                <li><a href="#" data-id="150" data-type="行き先" class="stat" data-add="none">彦根</a></li>
+                                <li><a href="#" data-id="150" data-type="行き先" class="stat" data-add="none">近江</a></li>
+                                <li><a href="#" data-id="150" data-type="行き先" class="stat" data-add="none">福知山</a></li>
                                 <!-- distance == 200 -->
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">名古屋</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">敦賀</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">大垣</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">岐阜</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">四日市</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">久居</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">鈴鹿</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">岡山</a></li>
-                                <li><a href="#" data-id="150" data-type="行き先" class="stat">津山</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">備前</a></li>
-                                <li><a href="#" data-id="200" data-type="行き先" class="stat">高松</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="two">名古屋</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">敦賀</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">大垣</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">岐阜</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">四日市</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">久居</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">鈴鹿</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="two">岡山</a></li>
+                                <li><a href="#" data-id="150" data-type="行き先" class="stat" data-add="none">津山</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">備前</a></li>
+                                <li><a href="#" data-id="200" data-type="行き先" class="stat" data-add="none">高松</a></li>
                                 <!-- distance == 250 -->
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">岡崎</a></li>
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">伊勢</a></li>
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">安城</a></li>
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">坂出</a></li>
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">三豊</a></li>
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">土岐</a></li>
-                                <li><a href="#" data-id="250" data-type="行き先" class="stat">多治見</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">岡崎</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">伊勢</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">安城</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">坂出</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">三豊</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">土岐</a></li>
+                                <li><a href="#" data-id="250" data-type="行き先" class="stat" data-add="none">多治見</a></li>
                                 <!-- distance == 300 -->
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">福山</a></li>
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">高知</a></li>
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">福井</a></li>
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">豊川</a></li>
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">尾道</a></li>
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">浜松</a></li>
-                                <li><a href="#" data-id="300" data-type="行き先" class="stat">加賀</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="none">福山</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="none">高知</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="none">福井</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="none">豊川</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="none">尾道</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="two">浜松</a></li>
+                                <li><a href="#" data-id="300" data-type="行き先" class="stat" data-add="none">加賀</a></li>
                                 <!-- distance == 350 -->
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">金沢</a></li>
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">松江</a></li>
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">米子</a></li>
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">東広島</a></li>
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">松山</a></li>
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">高山</a></li>
-                                <li><a href="#" data-id="350" data-type="行き先" class="stat">飯田</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">金沢</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">松江</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">米子</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">東広島</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">松山</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">高山</a></li>
+                                <li><a href="#" data-id="350" data-type="行き先" class="stat" data-add="none">飯田</a></li>
                                 <!-- distance == 400 -->
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">高岡</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">松本</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">伊那</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">藤枝</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">広島</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">呉</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">西広島</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">若国</a></li>
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat"></a></li> <!--??-->
-                                <li><a href="#" data-id="400" data-type="行き先" class="stat">中村</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">高岡</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">松本</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">伊那</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">藤枝</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="two">広島</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">呉</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">西広島</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">若国</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">出雲</a></li>
+                                <li><a href="#" data-id="400" data-type="行き先" class="stat" data-add="none">中村</a></li>
                                 <!-- distance == 450 -->
-                                <li><a href="#" data-id="450" data-type="行き先" class="stat">沼津</a></li>
-                                <li><a href="#" data-id="450" data-type="行き先" class="stat">富士</a></li>
-                                <li><a href="#" data-id="450" data-type="行き先" class="stat">柳井</a></li>
-                                <li><a href="#" data-id="450" data-type="行き先" class="stat">大田</a></li>
+                                <li><a href="#" data-id="450" data-type="行き先" class="stat" data-add="none">沼津</a></li>
+                                <li><a href="#" data-id="450" data-type="行き先" class="stat" data-add="none">富士</a></li>
+                                <li><a href="#" data-id="450" data-type="行き先" class="stat" data-add="none">柳井</a></li>
+                                <li><a href="#" data-id="450" data-type="行き先" class="stat" data-add="none">大田</a></li>
                                 <!-- distance == 500 -->
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">小田原</a></li>
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">糸魚川</a></li>
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">山口</a></li>
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">防府</a></li>
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">下松</a></li>
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">浜田</a></li>
-                                <li><a href="#" data-id="500" data-type="行き先" class="stat">宇和島</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">小田原</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">糸魚川</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">山口</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">防府</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">下松</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">浜田</a></li>
+                                <li><a href="#" data-id="500" data-type="行き先" class="stat" data-add="none">宇和島</a></li>
                                 <!-- distance == 550 -->
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">横浜</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">川崎</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">厚木</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">相模原</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">座間</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">八王子</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">上越</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">甲府</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">宇部</a></li>
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">萩</a></li> 
-                                <li><a href="#" data-id="550" data-type="行き先" class="stat">益田</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="two">横浜</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="two">川崎</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">厚木</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="two">相模原</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">座間</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">八王子</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">上越</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">甲府</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">宇部</a></li>
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">萩</a></li> 
+                                <li><a href="#" data-id="550" data-type="行き先" class="stat" data-add="none">益田</a></li>
                                 <!-- distance == 600 -->
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">東京</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">市川</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">松戸</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">船橋</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">大宮</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">和光</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">入間</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">高崎</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">越谷</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">長岡</a></li>
-                                <li><a href="#" data-id="600" data-type="行き先" class="stat">北九州</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="one">東京</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">市川</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">松戸</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="two">船橋</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">大宮</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">和光</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">入間</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">高崎</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">越谷</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="none">長岡</a></li>
+                                <li><a href="#" data-id="600" data-type="行き先" class="stat" data-add="two">北九州</a></li>
                                 <!-- distance == 650 -->
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">福岡</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">筑豊</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">中津</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">太田</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">熊谷</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">小山</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">佐野</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">大田原</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">柏・千葉</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">新潟</a></li>
-                                <li><a href="#" data-id="650" data-type="行き先" class="stat">三条</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="two">福岡</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">筑豊</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">中津</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">太田</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">熊谷</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">小山</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">佐野</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">大田原</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="two">柏・千葉</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">新潟</a></li>
+                                <li><a href="#" data-id="650" data-type="行き先" class="stat" data-add="none">三条</a></li>
                                 <!-- distance == 700 -->
-                                <li><a href="#" data-id="700" data-type="行き先" class="stat">宇都宮</a></li>
-                                <li><a href="#" data-id="700" data-type="行き先" class="stat">土浦</a></li>
-                                <li><a href="#" data-id="700" data-type="行き先" class="stat">日立</a></li>
-                                <li><a href="#" data-id="700" data-type="行き先" class="stat">鳥栖</a></li>
-                                <li><a href="#" data-id="700" data-type="行き先" class="stat"></a></li><!--??-->
-                                <li><a href="#" data-id="700" data-type="行き先" class="stat">筑後</a></li>
+                                <li><a href="#" data-id="700" data-type="行き先" class="stat" data-add="none">宇都宮</a></li>
+                                <li><a href="#" data-id="700" data-type="行き先" class="stat" data-add="none">土浦</a></li>
+                                <li><a href="#" data-id="700" data-type="行き先" class="stat" data-add="none">日立</a></li>
+                                <li><a href="#" data-id="700" data-type="行き先" class="stat" data-add="none">鳥栖</a></li>
+                                <li><a href="#" data-id="700" data-type="行き先" class="stat" data-add="none">唐津</a></li>
+                                <li><a href="#" data-id="700" data-type="行き先" class="stat" data-add="none">筑後</a></li>
                                 <!-- distance == 750 -->
-                                <li><a href="#" data-id="750" data-type="行き先" class="stat">大分</a></li>
-                                <li><a href="#" data-id="750" data-type="行き先" class="stat">佐賀</a></li>
-                                <li><a href="#" data-id="750" data-type="行き先" class="stat">伊万里</a></li>
-                                <li><a href="#" data-id="750" data-type="行き先" class="stat">大牟田</a></li>
-                                <li><a href="#" data-id="750" data-type="行き先" class="stat">水戸</a></li>
+                                <li><a href="#" data-id="750" data-type="行き先" class="stat" data-add="none">大分</a></li>
+                                <li><a href="#" data-id="750" data-type="行き先" class="stat" data-add="none">佐賀</a></li>
+                                <li><a href="#" data-id="750" data-type="行き先" class="stat" data-add="none">伊万里</a></li>
+                                <li><a href="#" data-id="750" data-type="行き先" class="stat" data-add="none">大牟田</a></li>
+                                <li><a href="#" data-id="750" data-type="行き先" class="stat" data-add="none">水戸</a></li>
                                 <!-- distance == 800 -->
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">郡山</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">いわき</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">白河</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">長崎</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">佐世保</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">熊本</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">八代</a></li>
-                                <li><a href="#" data-id="800" data-type="行き先" class="stat">詫間</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">郡山</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">いわき</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">白河</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">長崎</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">佐世保</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="two">熊本</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">八代</a></li>
+                                <li><a href="#" data-id="800" data-type="行き先" class="stat" data-add="none">詫間</a></li>
                                 <!-- distance == 850 -->
-                                <li><a href="#" data-id="850" data-type="行き先" class="stat">長崎東</a></li>
-                                <li><a href="#" data-id="850" data-type="行き先" class="stat">延岡</a></li>
-                                <li><a href="#" data-id="850" data-type="行き先" class="stat">庄内</a></li>
+                                <li><a href="#" data-id="850" data-type="行き先" class="stat" data-add="none">長崎東</a></li>
+                                <li><a href="#" data-id="850" data-type="行き先" class="stat" data-add="none">延岡</a></li>
+                                <li><a href="#" data-id="850" data-type="行き先" class="stat" data-add="none">庄内</a></li>
                                 <!-- distance == 900 -->
-                                <li><a href="#" data-id="900" data-type="行き先" class="stat">福島</a></li>
-                                <li><a href="#" data-id="900" data-type="行き先" class="stat">出水</a></li>
+                                <li><a href="#" data-id="900" data-type="行き先" class="stat" data-add="none">福島</a></li>
+                                <li><a href="#" data-id="900" data-type="行き先" class="stat" data-add="none">出水</a></li>
                                 <!-- distance == 950 -->
-                                <li><a href="#" data-id="950" data-type="行き先" class="stat">仙台</a></li>
-                                <li><a href="#" data-id="950" data-type="行き先" class="stat">秋田</a></li>
-                                <li><a href="#" data-id="950" data-type="行き先" class="stat">宮崎</a></li>
-                                <li><a href="#" data-id="950" data-type="行き先" class="stat">川内</a></li>
+                                <li><a href="#" data-id="950" data-type="行き先" class="stat" data-add="two">仙台</a></li>
+                                <li><a href="#" data-id="950" data-type="行き先" class="stat" data-add="none">秋田</a></li>
+                                <li><a href="#" data-id="950" data-type="行き先" class="stat" data-add="none">宮崎</a></li>
+                                <li><a href="#" data-id="950" data-type="行き先" class="stat" data-add="none">川内</a></li>
                                 <!-- distance == 1000 -->
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">山形</a></li>
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">水沢</a></li>
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">大館</a></li>
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">日南</a></li>
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">都城</a></li>
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">鹿児島</a></li>
-                                <li><a href="#" data-id="1000" data-type="行き先" class="stat">加治木</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="none">山形</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="none">水沢</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="none">大館</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="none">日南</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="none">都城</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="two">鹿児島</a></li>
+                                <li><a href="#" data-id="1000" data-type="行き先" class="stat" data-add="none">加治木</a></li>
                                 <!-- distance == 1100 -->
-                                <li><a href="#" data-id="1100" data-type="行き先" class="stat">盛山</a></li>
-                                <li><a href="#" data-id="1100" data-type="行き先" class="stat">弘前</a></li>
-                                <li><a href="#" data-id="1100" data-type="行き先" class="stat">十和田</a></li>
-                                <li><a href="#" data-id="1100" data-type="行き先" class="stat">枕崎</a></li>
-                                <li><a href="#" data-id="1100" data-type="行き先" class="stat">志布志</a></li>
-                                <li><a href="#" data-id="1100" data-type="行き先" class="stat">鹿屋</a></li>
+                                <li><a href="#" data-id="1100" data-type="行き先" class="stat" data-add="none">盛山</a></li>
+                                <li><a href="#" data-id="1100" data-type="行き先" class="stat" data-add="none">弘前</a></li>
+                                <li><a href="#" data-id="1100" data-type="行き先" class="stat" data-add="none">十和田</a></li>
+                                <li><a href="#" data-id="1100" data-type="行き先" class="stat" data-add="none">枕崎</a></li>
+                                <li><a href="#" data-id="1100" data-type="行き先" class="stat" data-add="none">志布志</a></li>
+                                <li><a href="#" data-id="1100" data-type="行き先" class="stat" data-add="none">鹿屋</a></li>
                                 <!-- distance == 1200 -->
-                                <li><a href="#" data-id="1200" data-type="行き先" class="stat">青山</a></li>
-                                <li><a href="#" data-id="1200" data-type="行き先" class="stat">八戸</a></li>
-                                <li><a href="#" data-id="1200" data-type="行き先" class="stat">函館</a></li>
+                                <li><a href="#" data-id="1200" data-type="行き先" class="stat" data-add="none">青山</a></li>
+                                <li><a href="#" data-id="1200" data-type="行き先" class="stat" data-add="none">八戸</a></li>
+                                <li><a href="#" data-id="1200" data-type="行き先" class="stat" data-add="none">函館</a></li>
                                 <!-- distance == 1300 -->
-                                <li><a href="#" data-id="1300" data-type="行き先" class="stat">伊達</a></li>
+                                <li><a href="#" data-id="1300" data-type="行き先" class="stat" data-add="none">伊達</a></li>
                                 <!-- distance == 1400 -->
-                                <li><a href="#" data-id="1400" data-type="行き先" class="stat">小樽</a></li>
-                                <li><a href="#" data-id="1400" data-type="行き先" class="stat">苫小牧</a></li>
-                                <li><a href="#" data-id="1400" data-type="行き先" class="stat">室蘭</a></li>
+                                <li><a href="#" data-id="1400" data-type="行き先" class="stat" data-add="none">小樽</a></li>
+                                <li><a href="#" data-id="1400" data-type="行き先" class="stat" data-add="none">苫小牧</a></li>
+                                <li><a href="#" data-id="1400" data-type="行き先" class="stat" data-add="none">室蘭</a></li>
                                 <!-- distance == 1500 -->
-                                <li><a href="#" data-id="1500" data-type="行き先" class="stat"></a>札幌</li>
-                                <li><a href="#" data-id="1500" data-type="行き先" class="stat"></a>美唄</li>
+                                <li><a href="#" data-id="1500" data-type="行き先" class="stat" data-add="two"></a>札幌</li>
+                                <li><a href="#" data-id="1500" data-type="行き先" class="stat" data-add="none"></a>美唄</li>
                                 <!-- distance == 1600 -->
-                                <li><a href="#" data-id="1600" data-type="行き先" class="stat">旭川</a></li>
+                                <li><a href="#" data-id="1600" data-type="行き先" class="stat" data-add="none">旭川</a></li>
                                 <!-- distance == 1700 -->
-                                <li><a href="#" data-id="1700" data-type="行き先" class="stat">帯広</a></li>
+                                <li><a href="#" data-id="1700" data-type="行き先" class="stat" data-add="none">帯広</a></li>
                                 <!-- distance == 1800 -->
-                                <li><a href="#" data-id="1800" data-type="行き先" class="stat">釧路</a></li>
-                                <li><a href="#" data-id="1800" data-type="行き先" class="stat">北見</a></li>
-
-
+                                <li><a href="#" data-id="1800" data-type="行き先" class="stat" data-add="none">釧路</a></li>
+                                <li><a href="#" data-id="1800" data-type="行き先" class="stat" data-add="none">北見</a></li>
                             </ul>
                         </div>
                     </div>
@@ -622,7 +619,7 @@
     <div class="submit-button text-center">
         <input type="submit" value="Submit" name="shipping">
     </div>
-    <p class="text-center" style="margin-top: 2%; margin-bottom: 2%">運賃<p>
+    <h3 class="text-center" style="margin-top: 2%; margin-bottom: 2%">結果</h3>
     <!-- result  -->
     <p class="shipping-fee text-center">
 
