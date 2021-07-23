@@ -50,6 +50,13 @@ $(document).ready(function() {
     $(this).addClass('active');
   }); 
 
+  /* toggler */
+
+  $("#toggle").on('click', function() {
+    $(this).toggleClass("on");
+    $("#menu").slideToggle();
+  });
+
   /* code generator */
 
   // 部品　
@@ -4193,6 +4200,6 @@ $(document).ready(function() {
 
     $totalCost = $cost + $additional_cost
     // return cost 
-    $('.shipping-fee').html('総重量は' + $totalWeight + 'kg、運賃は' + $totalCost +'円です。(割増料' + $additional_cost + '円）');
+    $('.shipping-fee').html('総重量は' + $totalWeight + 'kg、運賃は' + $totalCost +'円です。(割増料' + $additional_cost + '円を含め）');
   });
 });
