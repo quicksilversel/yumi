@@ -14,9 +14,36 @@ a:hover {
     text-decoration: none;
 }
 
+.main-content {
+    min-height: 85vh;
+}
+
+/* button style */
+
 .submit-button {
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+input[type="submit"] {
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Yantramanav", sans-serif;
+    font-size: 18px;
+    margin: 0px 25px 15px;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5% 3%;
+    
+}
+input[type="submit"]:hover {
+    color: white;
+    background-color: black;
 }
 
 /* tables */
@@ -31,6 +58,10 @@ table, th, td {
     border: 1px solid rgb(204,204,204);
 }
 
+td button, td input, td .option {
+    margin: 1%;
+}
+
 /* header */
 
 #header {
@@ -39,6 +70,17 @@ table, th, td {
     font-family: "Yantramanav", sans-serif;
     text-transform: uppercase;
     font-size: 50px;
+}
+
+/* footer */
+#footer {
+    color: black;
+    padding-bottom: 2%;
+}
+
+#footer li {
+    display: inline-block;
+    padding: 0 20px;
 }
 
 /* filter */
@@ -56,7 +98,7 @@ table, th, td {
 }
 
 .filter_advanced th {
-    background-color: rgb(241, 246, 247);
+    background-color: rgb(230,230,230);
 }
 
 .results_table {
@@ -72,8 +114,8 @@ table, th, td {
 }
 
 .condition a.active {
-    background-color: #666;
-    color: white;
+    background-color: rgb(180,180,180);
+    color: black;
 }
 
 .dropdown .btn {
