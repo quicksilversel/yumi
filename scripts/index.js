@@ -87,6 +87,7 @@ $(document).ready(function() {
   var $quantity = 0;
   var $cost = 0;
   var $totalWeight = 0;
+  var $additional = '';
   var $additional_cost = 0;
   var $totalCost = 0;
 
@@ -4198,8 +4199,21 @@ $(document).ready(function() {
       }
     }
 
-    $totalCost = $cost + $additional_cost
-    // return cost 
-    $('.shipping-fee').html('総重量は' + $totalWeight + 'kg、運賃は' + $totalCost +'円です。(割増料' + $additional_cost + '円を含め）');
+    if (typeof $cost === 'string' || $cost instanceof String)
+    {
+      $('.shipping-fee').html('please enter a valid number.');
+    }
+    else if($weight == 0){
+      $('.shipping-fee').html('商品を選んでください。');
+    }
+    else if($distance == 0){
+      $('.shipping-fee').html('行き先を選んでください。');
+    }
+    else {
+      $totalCost = $cost + $additional_cost
+      // return cost 
+      $('.shipping-fee').html('総重量は' + $totalWeight + 'kg、運賃は' + $totalCost +'円です。(割増料' + $additional_cost + '円を含め）');
+    }
+    
   });
 });

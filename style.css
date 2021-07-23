@@ -127,6 +127,7 @@ input[class="form-control"] {
     position: absolute;
     right: 2rem;
     top: 1rem;
+    cursor: pointer;
 }
 
 /* lines */
