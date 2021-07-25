@@ -80,6 +80,8 @@ $(document).ready(function() {
 
   /* shipping fee calculator */
 
+  
+
   // variables 
 
   var $weight = 0;
@@ -90,6 +92,7 @@ $(document).ready(function() {
   var $additional = '';
   var $additional_cost = 0;
   var $totalCost = 0;
+  var lastClass = -1;
 
   // get 商品
   $(".商品").on('click', 'li a', function(){
@@ -104,6 +107,27 @@ $(document).ready(function() {
 
   // return shipping fee
   $("input[name='shipping']").on("click", function(){
+
+    // randomly change panda color
+    const colorVariations = [
+      'blue',
+      'green',
+      'pink',
+      'brown',
+      'dark_brown'
+    ];
+
+    var nextClass = Math.floor(Math.random() * 5);
+
+    // ensures no repeat
+    while (nextClass === lastClass) {
+      var nextClass = Math.floor(Math.random() * 5);
+    }
+
+    $('.panda_icon_random').removeClass('blue green pink brown dark_brown')
+    .addClass(colorVariations[nextClass]);
+
+    lastClass = nextClass;
 
     // input values
     $quantity = parseInt($('#数量').val());
