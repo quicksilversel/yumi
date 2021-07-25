@@ -153,6 +153,7 @@ $(document).ready(function() {
         case($totalWeight < 80):
           $cost = 900;
           break;
+          /**/
         case($totalWeight < 100):
           $cost = 1000;
           break;
@@ -168,6 +169,7 @@ $(document).ready(function() {
         case($totalWeight < 180):
           $cost = 1600;
           break;
+          /**/
         case($totalWeight < 200):
           $cost = 1700;
           break;
@@ -183,6 +185,7 @@ $(document).ready(function() {
         case($totalWeight < 400):
           $cost = 2600;
           break;
+          /**/
         case($totalWeight < 450):
           $cost = 2900;
           break;
@@ -198,6 +201,7 @@ $(document).ready(function() {
         case($totalWeight < 650):
           $cost = 4100;
           break;
+          /**/
         case($totalWeight < 700):
           $cost = 4400;
           break;
@@ -213,6 +217,7 @@ $(document).ready(function() {
         case($totalWeight < 900):
           $cost = 5700;
           break;
+          /**/
         case($totalWeight < 950):
           $cost = 6000;
           break;
@@ -228,6 +233,7 @@ $(document).ready(function() {
         case($totalWeight < 1300):
           $cost = 8300;
           break;
+          /**/
         case($totalWeight < 1400):
           $cost = 8800;
           break;
@@ -243,6 +249,7 @@ $(document).ready(function() {
         case($totalWeight < 1800):
           $cost = 10500;
           break;
+          /**/
         case($totalWeight < 1900):
           $cost = 11000;
           break;
@@ -274,6 +281,7 @@ $(document).ready(function() {
         case(totalWeight < 80):
           $cost = 900;
           break;
+          /**/
         case($totalWeight < 100):
           $cost = 1100;
           break;
@@ -289,6 +297,7 @@ $(document).ready(function() {
         case($totalWeight < 180):
           $cost = 1600;
           break;
+          /**/
         case($totalWeight < 200):
           $cost = 1800;
           break;
@@ -304,6 +313,7 @@ $(document).ready(function() {
         case($totalWeight < 400):
           $cost = 2800;
           break;
+          /**/
         case($totalWeight < 450):
           $cost = 3200;
           break;
@@ -319,6 +329,7 @@ $(document).ready(function() {
         case($totalWeight < 650):
           $cost = 4500;
           break;
+          /**/
         case($totalWeight < 700):
           $cost = 4900;
           break;
@@ -334,6 +345,7 @@ $(document).ready(function() {
         case($totalWeight < 900):
           $cost = 6200;
           break;
+          /**/
         case($totalWeight < 950):
           $cost = 6500;
           break;
@@ -349,6 +361,7 @@ $(document).ready(function() {
         case($totalWeight < 1300):
           $cost = 9300;
           break;
+          /**/
         case($totalWeight < 1400):
           $cost = 9900;
           break;
@@ -364,6 +377,7 @@ $(document).ready(function() {
         case($totalWeight < 1800):
           $cost = 12100;
           break;
+          /**/
         case($totalWeight < 1900):
           $cost = 12600;
           break;
@@ -1459,7 +1473,7 @@ $(document).ready(function() {
           $cost = 6800;
           break;
         case($totalWeight < 550):
-          $cost = 7400;
+          $cost = 7500;
           break;
         case($totalWeight < 600):
           $cost = 8200;
@@ -2982,7 +2996,7 @@ $(document).ready(function() {
           $cost = 9100;
           break;
         case($totalWeight < 350):
-          $cost = 11100;
+          $cost = 11000;
           break;
         case($totalWeight < 400):
           $cost = 12800;
