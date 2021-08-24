@@ -55,19 +55,22 @@ $(document).ready(function() {
              && (data[i].atsumi == $atsumi)
              && (data[i].company == $company)) 
             {
-                // console.log(data[i].code);
-                result.push(data[i].code);
+                result.push(data[i]);
             }
         };
         if(result.length == 0){
             $('.code').html('該当の部品がありません。');
         }
         else{
-            $('.code').html('');
+            $('.code-before').html('');
+            /*
             $.each(result, function(i, val) {
                 val = "<p>"+val+"</p>"
-                $('.code').append(val);
-            });
+                $('.code-before').append(val);
+            }); */
+            for (var i = 0, len = result.length; i < len; i++) {
+                $(".result-table").append("<tr><td style=\"width: 10%;\">" + result[i].type + "</td><td style=\"width: 15%;\">" + result[i].code + "</td><td style=\"width: 15%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td><td style=\"width: 20%;\">" + result[i].company + "</td></tr>")
+            };
         }
         
      });
