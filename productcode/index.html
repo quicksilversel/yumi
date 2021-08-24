@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>Multiple Filter</title>
+    <title>Code Generator</title>
     <!-- bootstrap -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,7 @@
     <!-- js -->
     <script type="text/javascript" src="../scripts/jquery-3.5.1.min.js"></script>    
     <script type="text/javascript" src="../scripts/index.js"></script>
+    <script type="text/javascript" src="../scripts/producecode.js"></script>
     <!-- css -->
     <link href="../style.css" type="text/css", rel="stylesheet">
     <!-- font awesome -->
@@ -21,8 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <!-- favicon -->
-
 </head>
 <body>
     <!-- filter table -->
@@ -30,6 +29,29 @@
     <table class="text-center filter_advanced">
         <tbody>
             <!-- filter 1 -->
+            <tr>
+                <th style="width: 6em">中分類</th>
+                <td style="width: calc(100% - 6em); padding: 4px 0;">
+                    <div class="condition">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">中分類
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu 中分類">
+                                <input class="form-control" id="myInput1" type="text" placeholder="検索">
+                                <li><a href="#" data-id="RWB" data-type="中分類" class="stat 表面処理">RWB</a></li>
+                                <li><a href="#" data-id="RWBK" data-type="中分類" class="stat 表面処理">RWBK</a></li>
+                                <li><a href="#" data-id="RWM" data-type="中分類" class="stat 表面処理">RWM</a></li>
+                                <li><a href="#" data-id="RWMI" data-type="中分類" class="stat 表面処理">RWMI</a></li>
+                                <li><a href="#" data-id="9RWB" data-type="中分類" class="stat 表面処理">9RWB</a></li>
+                                <li><a href="#" data-id="9RWBK" data-type="中分類" class="stat 表面処理">9RWBK</a></li>
+                                <li><a href="#" data-id="9RWM" data-type="中分類" class="stat 表面処理">9RWM</a></li>
+                                <li><a href="#" data-id="9RWMI" data-type="中分類" class="stat 表面処理">9RWMI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- filter 2 -->
             <tr>
                 <th style="width: 6em">表面加工</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
@@ -50,7 +72,7 @@
                     </div>
                 </td>
             </tr>
-            <!-- filter 2 -->
+            <!-- filter 3 -->
             <tr>
                 <th style="width: 6em">呼び方</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
@@ -60,7 +82,7 @@
                     </form>
                 </td>
             </tr>
-            <!-- filter 3 -->
+            <!-- filter 4 -->
             <tr>
                 <th style="width: 6em">3サイズ</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
@@ -77,12 +99,10 @@
         </tbody>
     </table>
     <div class="submit-button-simple text-center">
-        <input type="submit" value="Submit" name="result-code">
+        <input type="submit" value="Submit" id="get-code" name="result-code">
     </div>
     <!-- result  -->
-    <p class="code text-center">
-
-    </p>
+    <p class="code text-center"></p>
       
 </body>
 </html>
