@@ -24,11 +24,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Code generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="analyzer.html">Code analyzer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Shipping Fee</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
     <!-- filter table -->
     <h1 class="text-center" id="header">Code generator</h1>
     <table class="text-center filter_advanced">
         <tbody>
-            <!-- filter 1 -->
+            <!-- filter 1 
             <tr>
                 <th style="width: 6em">中分類</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
@@ -50,7 +69,7 @@
                         </div>
                     </div>
                 </td>
-            </tr>
+            </tr>　-->
             <!-- filter 2 -->
             <tr>
                 <th style="width: 6em">表面加工</th>
@@ -77,8 +96,8 @@
                 <th style="width: 6em">呼び方</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
                     <form>
-                        <label for="fname">呼び方: </label>
-                        <input type="text" id="呼び" placeholder="10">
+                        <label for="fname">呼び方 </label>
+                        <input type="text" id="呼び" placeholder="0">
                     </form>
                 </td>
             </tr>
@@ -87,12 +106,12 @@
                 <th style="width: 6em">3サイズ</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
                     <form>
-                        <label for="fname">内径: </label>
-                        <input type="text" id="内径" placeholder="6.6">
-                        <label for="lname">外径: </label>
-                        <input type="text" id="外径" placeholder="12.5">
-                        <label for="lname">厚み: </label>
-                        <input type="text" id="厚み" placeholder="1.6">
+                        <label for="fname">内径 </label>
+                        <input type="text" id="内径" placeholder="0">
+                        <label for="lname">外径 </label>
+                        <input type="text" id="外径" placeholder="0">
+                        <label for="lname">厚み </label>
+                        <input type="text" id="厚み" placeholder="0">
                     </form>
                 </td>
             </tr>
@@ -102,7 +121,7 @@
         <input type="submit" value="Submit" id="get-code" name="result-code">
     </div>
     <!-- result  -->
-    <p class="code text-center"></p>
+    <p class="code text-center">Submitボタンを押してください。</p>
       
 </body>
 </html>
