@@ -1,7 +1,7 @@
-/************************ shipping fee calculator ************************/
+// shipping fee calculator 
+$(document).ready(function() {
 
     // variables 
-
     var $weight = 0;
     var $distance = 0;
     var $quantity = 0;
@@ -25,6 +25,7 @@
 
     // return shipping fee 
     $("input[name='shipping']").on("click", function(){
+      
     /* panda button start */
 
     // randomly change panda color
@@ -200,7 +201,7 @@
         case($totalWeight < 60):
           $cost = 900;
           break;
-        case(totalWeight < 80):
+        case($totalWeight < 80):
           $cost = 900;
           break;
           /**/
@@ -226,7 +227,7 @@
         case($totalWeight < 250):
           $cost = 1900;
           break;
-        case(totalWeight < 300):
+        case($totalWeight < 300):
           $cost = 2100;
           break;
         case($totalWeight < 350):
@@ -4177,3 +4178,4 @@
     }
     
   });
+});

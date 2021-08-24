@@ -90,7 +90,7 @@ $(document).ready(function() {
                 $('.code-before').append(val);
             }); */
             for (var i = 0, len = result.length; i < len; i++) {
-                $(".result-table tbody").append("<tr><td style=\"width: 10%;\">" + result[i].type + "</td><td style=\"width: 15%;\">" + result[i].code + "</td><td style=\"width: 15%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td><td style=\"width: 20%;\">" + result[i].company + "</td></tr>")
+                $(".result-table tbody").append("<tr><td style=\"width: 30%;\">" + result[i].code + "</td><td style=\"width: 30%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td></tr>")
             };
         }
         
