@@ -133,6 +133,10 @@ td button, td input, td .option {
     margin: 1rem;
 }
 
+.dropdown-menu input {
+    margin: 0;
+}
+
 /* header */
 
 #header {
