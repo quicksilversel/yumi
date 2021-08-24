@@ -42,7 +42,7 @@ $(document).ready(function() {
         }
         else{
             $(".analyzer-before").html("");
-            $(".result-row").html("<td style=\"width: 10%;\">" + $type + "</td><td style=\"width: 15%;\">" + $code + "</td><td style=\"width: 15%;\">" + $name + "</td><td style=\"width: 10%;\">" + $yobi + "</td><td style=\"width: 10%;\">" + $naikei + "</td><td style=\"width: 10%;\">" + $gaikei + "</td><td style=\"width: 10%;\">" + $atsumi + "</td><td style=\"width: 20%;\">" + $company + "</td>")
+            $(".result-row").html("<td style=\"width: 40%;\">" + $name + "</td><td style=\"width: 15%;\">" + $yobi + "</td><td style=\"width: 15%;\">" + $naikei + "</td><td style=\"width: 15%;\">" + $gaikei + "</td><td style=\"width: 15%;\">" + $atsumi + "</td>")
         }
        
      });
