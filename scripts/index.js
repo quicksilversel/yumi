@@ -1,86 +1,113 @@
 $(document).ready(function() {
-  // variables 
-  var $id = '';
+    /************************ global functions ************************/
 
-  // dropdown change text
-  $(".dropdown-menu").on('click', 'li a', function(){
-    $(this).closest('.condition').find(".btn:first-child").text($(this).text());
-    $(this).closest('.condition').find(".btn:first-child").val($(this).text());
-  });
-
-  // dropdown search for text
-  $("#myInput1").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".部品 li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    // dropdown change text
+    $(".dropdown-menu").on('click', 'li a', function(){
+        $(this).closest('.condition').find(".btn:first-child").text($(this).text());
+        $(this).closest('.condition').find(".btn:first-child").val($(this).text());
     });
-  });
 
-  $("#myInput2").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".表面処理 li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    // dropdown search for text
+    $("#myInput2").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".表面処理 li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
-  });
 
-  $("#myInput3").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".呼び方 li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    $("#myInput4").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".商品 li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
-  });
-
-  $("#myInput4").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".商品 li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    
+    $("#myInput5").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".行き先 li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
-  });
-  
-  $("#myInput5").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".行き先 li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+    // add active class
+    $('.stat').on('click', function() {
+        $('.stat').removeClass('active');
+        $(this).addClass('active');
+    }); 
+
+    /* toggler */
+
+    $("#toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $("#menu").slideToggle();
     });
-  });
 
-  // add active class
-  $('.stat').on('click', function() {
-    $('.stat').removeClass('active');
-    $(this).addClass('active');
-  }); 
+    /************************ code generator ************************/
 
-  /* toggler */
+    // get 表面加工
+    $(".表面処理").on('click', 'li a', function(){
+        $company = $(this).data('id');
+    });
 
-  $("#toggle").on('click', function() {
-    $(this).toggleClass("on");
-    $("#menu").slideToggle();
-  });
+    // return code
+    $("input[name='result-code']").on("click", function(){
 
-  /* code generator */
+        // get 3サイズ、呼び
+        var $yobi = $('#呼び').val();
+        var $naikei = $('#内径').val();
+        var $gaikei = $('#外径').val();
+        var $atsumi = $('#厚み').val();
+        /*
+        console.log($yobi);
+        console.log($naikei);
+        console.log($gaikei);
+        console.log($atsumi);
+        console.log($company); 
+        */
+        
 
-  // 部品　
-  $(".部品").on('click', 'li a', function(){
-    $id = $(this).data('id');
-  });
+        // find code from array
+        data.forEach(function(item) {
+            if((item.yobi == $yobi) 
+            && (item.naikei == $naikei)
+            && (item.gaikei == $gaikei)
+            && (item.atsumi == $atsumi)
+            && (item.company == $company)) 
+            {
+                //console.log(item.code);
+                var displayData = item.code;
+                $('.code').html(displayData);
+            }
+          });
 
-  // return code
-  $("input[name='code']").on("click", function(){
-    var $year = new Date().getFullYear();
+    });
+    /************************ codes data ************************/
 
-    // input values
-    var $naikei = $('#内径').val();
-    var $gaikei = $('#外径').val();
-    var $atsumi = $('#厚み').val();
+    var data = [
+        {
+        code: "RWB00106",
+        name: "黒丸座（ＩＳＯ）ﾄﾞﾌﾞ",
+        yobi: 6,
+        // 3サイズ
+        naikei: 6.6,
+        gaikei: 12.5,
+        atsumi: 1.6,
+        // 表面加工
+        company : "ドブ" 
+        },
+        {
+        code: "RWB00108",
+        name: "黒丸座（ＩＳＯ）ﾄﾞﾌﾞ",
+        yobi: 8,
+        naikei: 9,
+        gaikei: 17,
+        atsumi: 1.6,
+        company : "ドブ"
+        }
+    ]
 
-  var $code = $id + $year + $naikei + $gaikei + $atsumi;
-  $('.result-code').html($code);
 
-  });
-
-  /* shipping fee calculator */
-
-  
+  /************************ shipping fee calculator ************************/
 
   // variables 
 
@@ -105,8 +132,9 @@ $(document).ready(function() {
     $additional = $(this).data('add');
   });
 
-  // return shipping fee
+  // return shipping fee 
   $("input[name='shipping']").on("click", function(){
+    /* panda button start */
 
     // randomly change panda color
     const colorVariations = [
@@ -128,12 +156,15 @@ $(document).ready(function() {
     .addClass(colorVariations[nextClass]);
 
     lastClass = nextClass;
+    /* panda button end */
 
     // input values
     $quantity = parseInt($('#数量').val());
 
     // calculate total weight
     $totalWeight = parseFloat($quantity * $weight).toFixed(4);
+
+    /************** data for shipping fee cost **************/
 
     // calculate cost by distance and weight
     if($distance == 50) {
@@ -4237,6 +4268,7 @@ $(document).ready(function() {
       }
     }
 
+    // shipping fee result 
     if (typeof $cost === 'string' || $cost instanceof String)
     {
       $('.shipping-fee').html('please enter a valid number.');

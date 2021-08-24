@@ -31,25 +31,7 @@
         <tbody>
             <!-- filter 1 -->
             <tr>
-                <th style="width: 6em">部品</th>
-                <td style="width: calc(100% - 6em); padding: 4px 0;">
-                    <div class="condition">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">部品
-                            <span class="caret"></span></button>
-                            <ul class="dropdown-menu 部品">
-                                <input class="form-control" id="myInput1" type="text" placeholder="検索">
-                                <li><a href="#" data-id="ボルト" data-type="部品" class="stat">ボルト</a></li>
-                                <li><a href="#" data-id="ナット" data-type="部品" class="stat">ナット</a></li>
-                                <li><a href="#" data-id="RWM" data-type="部品" class="stat">ワッシャー</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <!-- filter 2 -->
-            <tr>
-                <th style="width: 6em">表面処理</th>
+                <th style="width: 6em">表面加工</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
                     <div class="condition">
                         <div class="dropdown">
@@ -62,63 +44,41 @@
                                 <li><a href="#" data-id="三価クロメート" data-type="表面処理" class="stat 表面処理">三価クロメート</a></li>
                                 <li><a href="#" data-id="ドブ" data-type="表面処理" class="stat 表面処理">ドブ</a></li>
                                 <li><a href="#" data-id="SUS" data-type="表面処理" class="stat 表面処理">SUS</a></li>
+                                <li><a href="#" data-id="クロメート" data-type="表面処理" class="stat 表面処理">クロメート</a></li>
                             </ul>
                         </div>
                     </div>
                 </td>
             </tr>
-            <!-- filter 3 -->
+            <!-- filter 2 -->
             <tr>
                 <th style="width: 6em">呼び方</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
-                    <div class="condition">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">呼び
-                            <span class="caret"></span></button>
-                            <ul class="dropdown-menu 呼び方">
-                                <input class="form-control" id="myInput3" type="text" placeholder="検索">
-                                <li><a href="#" data-id="M6" data-type="呼び方" class="stat 呼び方">M6</a></li>
-                                <li><a href="#" data-id="M7" data-type="呼び方" class="stat 呼び方">M7</a></li>
-                                <li><a href="#" data-id="M8" data-type="呼び方" class="stat 呼び方">M8</a></li>
-                                <li><a href="#" data-id="M9" data-type="呼び方" class="stat 呼び方">M9</a></li>
-                                <li><a href="#" data-id="M10" data-type="呼び方" class="stat 呼び方">M10</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <form>
+                        <label for="fname">呼び方: </label>
+                        <input type="text" id="呼び" placeholder="10">
+                    </form>
                 </td>
             </tr>
-            <!-- filter 4 -->
+            <!-- filter 3 -->
             <tr>
                 <th style="width: 6em">3サイズ</th>
                 <td style="width: calc(100% - 6em); padding: 4px 0;">
                     <form>
                         <label for="fname">内径: </label>
-                        <input type="text" id="内径" placeholder="10">
+                        <input type="text" id="内径" placeholder="6.6">
                         <label for="lname">外径: </label>
-                        <input type="text" id="外径" placeholder="22">
+                        <input type="text" id="外径" placeholder="12.5">
                         <label for="lname">厚み: </label>
                         <input type="text" id="厚み" placeholder="1.6">
                     </form>
                 </td>
             </tr>
-            <!-- filter 5 -->
-            <tr>
-                <th style="width: 6em">規格</th>
-                <td style="width: calc(100% - 6em); padding: 4px 0;">
-                    <div class="condition">
-                        <div class="option">
-                            <a data-id="JIS" data-type="規格" class="stat 規格" role="button">JIS</a>
-                            <a data-id="ISO" data-type="規格" class="stat 規格" role="button">ISO</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
         </tbody>
     </table>
-    <div class="submit-button text-center">
+    <div class="submit-button-simple text-center">
         <input type="submit" value="Submit" name="result-code">
     </div>
-    <h3 class="text-center" style="margin-top: 2%; margin-bottom: 2%">結果</h3>
     <!-- result  -->
     <p class="code text-center">
 

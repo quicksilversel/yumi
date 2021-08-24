@@ -18,14 +18,14 @@ a:hover {
     min-height: 90vh;
 }
 
-/* button style 1
+/* button style 1 */
 
-.submit-button {
+.submit-button-simple {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-input[type="submit"] {
+.submit-button-simple input[type="submit"] {
     border: 1px solid black;
     background-color: transparent;
     cursor: pointer;
@@ -40,12 +40,12 @@ input[type="submit"] {
     transition: all 0.3s ease-in-out;
     padding: 0.5% 3%;
     
-}
+} 
 
 input[type="submit"]:hover {
     color: white;
     background-color: black;
-} */
+}   
 
 /* button style 2 : panda button
 originally from : https://codepen.io/Ma5a/pen/bGgxaYy */
@@ -98,6 +98,8 @@ input[type="submit"] {
 }
 
 
+
+
 /* tables */
 
 table {
@@ -110,7 +112,8 @@ table, th, td {
     border: 1px solid rgb(204,204,204);
 }
 
-td button, td input[id="数量"], td .option {
+td button, td input[id="数量"], 
+td input[id="呼び"], td input[id="内径"], td .option {
     margin: 1rem;
 }
 
@@ -168,6 +171,12 @@ input[class="form-control"] {
 .dropdown-menu {
     height: 400px;
     overflow-y: auto;
+}
+
+.dropdown-menu.表面処理 {
+    height: 250px;
+    overflow-y: auto;
+
 }
 
 /* toggle menu */
