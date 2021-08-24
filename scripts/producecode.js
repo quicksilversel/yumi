@@ -6,8 +6,9 @@ $(document).ready(function() {
     var $naikei = '';
     var $gaikei = '';
     var $atsumi = '';
+
     var $company = '';
-    var $type = '';
+    // var $type = '';
 
     var data = [];
     var result = [];
@@ -21,12 +22,12 @@ $(document).ready(function() {
     })
     .catch(error => console.log(error));
  
-    // get 中分類
+    /* 中分類
     $(".中分類").on('click', 'li a', function(){
         $type = $(this).data('id');
-    });
+    }); */
      
-    // get 表面加工
+    // 表面加工
     $(".表面処理").on('click', 'li a', function(){
          $company = $(this).data('id');
     });
@@ -47,7 +48,7 @@ $(document).ready(function() {
         console.log($company); 
         */
 
-        // find code from array
+        /* find code from array
         for (var i = 0, len = data.length; i < len; i++) {
             if((data[i].yobi == $yobi) 
              && (data[i].naikei == $naikei)
@@ -57,19 +58,39 @@ $(document).ready(function() {
             {
                 result.push(data[i]);
             }
-        };
+        }; */
+
+        // filter (required field)
+        result = data.filter(obj => obj.company == $company)
+
+        // filter (optional field)
+        if($yobi != ''){
+            result = result.filter(obj => obj.yobi == $yobi)
+        }
+        if($naikei != ''){
+            result = result.filter(obj => obj.naikei == $naikei)
+        }
+        if($gaikei != ''){
+            result = result.filter(obj => obj.gaikei == $gaikei)
+        }
+        if($atsumi != ''){
+            result = result.filter(obj => obj.atsumi == $atsumi)
+        }
+
         if(result.length == 0){
-            $('.code').html('該当の部品がありません。');
+            $('.result-table tbody').html('');
+            $('.code-before').html('該当の部品がありません。');
         }
         else{
             $('.code-before').html('');
+            $('.result-table tbody').html('');
             /*
             $.each(result, function(i, val) {
                 val = "<p>"+val+"</p>"
                 $('.code-before').append(val);
             }); */
             for (var i = 0, len = result.length; i < len; i++) {
-                $(".result-table").append("<tr><td style=\"width: 10%;\">" + result[i].type + "</td><td style=\"width: 15%;\">" + result[i].code + "</td><td style=\"width: 15%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td><td style=\"width: 20%;\">" + result[i].company + "</td></tr>")
+                $(".result-table tbody").append("<tr><td style=\"width: 10%;\">" + result[i].type + "</td><td style=\"width: 15%;\">" + result[i].code + "</td><td style=\"width: 15%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td><td style=\"width: 20%;\">" + result[i].company + "</td></tr>")
             };
         }
         
