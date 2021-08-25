@@ -1,6 +1,16 @@
 //  functions for code analyzer
 $(document).ready(function() {
 
+    // press enter to submit
+    $('html').keypress(function (e) {
+        var key = e.which;
+        if(key == 13)  // the enter key code
+        {
+        $('input#get-product').click();
+        return false;  
+        }
+    });   
+
     // global variables
     var $code, $name, $yobi, $naikei, $gaikei, $atsumi = '';
 

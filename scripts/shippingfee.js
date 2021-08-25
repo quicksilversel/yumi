@@ -1,6 +1,16 @@
 // shipping fee calculator 
 $(document).ready(function() {
 
+	// press enter to submit
+	$('html').keypress(function (e) {
+		var key = e.which;
+		if(key == 13)  // the enter key code
+		{
+		$('input[name = shipping]').click();
+		return false;  
+		}
+	});   
+
     // variables 
     var $weight = 0;
     var $distance = 0;

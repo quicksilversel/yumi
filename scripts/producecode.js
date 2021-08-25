@@ -1,6 +1,16 @@
 //  functions for code generator
 $(document).ready(function() {
 
+    // press enter to submit
+    $('html').keypress(function (e) {
+        var key = e.which;
+        if(key == 13)  // the enter key code
+         {
+           $('input[name = result-code]').click();
+           return false;  
+         }
+    });   
+
     // global variables
     var $yobi = '';
     var $naikei = '';
