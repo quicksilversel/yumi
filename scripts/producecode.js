@@ -77,7 +77,11 @@ $(document).ready(function() {
             result = result.filter(obj => obj.atsumi == $atsumi)
         }
 
-        if(result.length == 0){
+        if($company == ''){
+            $('.result-table tbody').html('');
+            $('.code-before').html('表面加工を選んでください。');
+        }
+        else if(result.length == 0){
             $('.result-table tbody').html('');
             $('.code-before').html('該当の部品がありません。');
         }

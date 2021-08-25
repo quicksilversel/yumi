@@ -174,10 +174,11 @@ table th {
     text-decoration: none;
     color: black;
     cursor: pointer;
+    margin: 0.5rem;
 }
 
 .condition a.active {
-    color: red;
+    font-weight: 600;
 }
 
 .dropdown .btn {
@@ -193,8 +194,12 @@ input[class="form-control"] {
     overflow-y: auto;
 }
 
+.dropdown-menu li:hover {
+    background-color: rgb(230,230,230);
+}
+
 .dropdown-menu.表面処理, .dropdown-menu.中分類{
-    height: 250px;
+    height: 200px;
     overflow-y: auto;
 
 }
