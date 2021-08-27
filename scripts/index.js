@@ -1,10 +1,16 @@
 $(document).ready(function() {
 
-    // dropdown change text
-    $(".dropdown-menu").on('click', 'li a', function(){
+    // dropdown change text to clicked item
+    $(".dropdown-menu").on('click', 'li', function(){
         $(this).closest('.condition').find(".btn:first-child").text($(this).text());
         $(this).closest('.condition').find(".btn:first-child").val($(this).text());
     });
+
+    // add active class to dropdown item
+    $('.stat').on('click', function() {
+        $('.stat').removeClass('active');
+        $(this).addClass('active');
+    }); 
 
     // dropdown search function
     $("#myInput1").on("keyup", function() {
@@ -34,14 +40,6 @@ $(document).ready(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
-
-    // add active class
-    $('.stat').on('click', function() {
-        $('.stat').removeClass('active');
-        $('.dropdown-menu li').removeClass('active');
-        $(this).addClass('active');
-        $(this).parent().addClass('active');
-    }); 
 
     // toggler
     $("#toggle").on('click', function() {

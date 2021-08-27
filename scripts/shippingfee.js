@@ -23,14 +23,16 @@ $(document).ready(function() {
     var lastClass = -1;
 
     // get 商品
-    $(".商品").on('click', 'li a', function(){
-        $weight = parseFloat($(this).data('id'));
+    $(".dropdown-menu.商品 li").on('click', function(){
+        $weight = parseFloat($(this).find('a').data('id'));
+        console.log($weight)
     });
 
     //　get 行き先
-    $(".行き先").on('click', 'li a', function(){
-        $distance = parseInt($(this).data('id'));
-        $additional = $(this).data('add');
+    $(".dropdown-menu.行き先 li").on('click', function(){
+        $distance = parseInt($(this).find('a').data('id'));
+        $additional = $(this).find('a').data('add');
+        // console.log($distance)
     });
 
     // return shipping fee 
@@ -189,7 +191,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 11400;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 11800;
           break;
         default:
@@ -317,7 +319,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 13200;
           break;
-        case($totalWeight):
+        case($totalWeight >= 2000):
           $cost = 13700;
           break;
         default:
@@ -445,7 +447,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 15700;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 16400;
           break;
         default:
@@ -573,7 +575,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 18000;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 18800;
           break;
         default:
@@ -701,7 +703,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 20400;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 21400;
           break;
         default:
@@ -829,7 +831,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 22100;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 23200;
           break;
         default:
@@ -957,7 +959,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 23800;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 25000;
           break;
         default:
@@ -1085,7 +1087,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 25500;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 26800;
           break;
         default:
@@ -1213,7 +1215,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 27300;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 28600;
           break;
         default:
@@ -1341,7 +1343,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 29000;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 30400;
           break;
         default:
@@ -1469,7 +1471,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 30700;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 32300;
           break;
         default:
@@ -1597,7 +1599,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 32400;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 34100;
           break;
         default:
@@ -1725,7 +1727,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 34100;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 35900;
           break;
         default:
@@ -1853,7 +1855,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 35900;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 37700;
           break;
         default:
@@ -1981,7 +1983,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 37600;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 39500;
           break;
         default:
@@ -2109,7 +2111,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 39300;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 41300;
           break;
         default:
@@ -2237,7 +2239,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 41000;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 43100;
           break;
         default:
@@ -2365,7 +2367,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 42800;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 45000;
           break;
         default:
@@ -2493,7 +2495,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 44500;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 46800;
           break;
         default:
@@ -2621,7 +2623,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 46200;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 48600;
           break;
         default:
@@ -2749,7 +2751,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 60400;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 63500;
           break;
         default:
@@ -2877,7 +2879,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 64500;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 67900;
           break;
         default:
@@ -3005,7 +3007,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 68700;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 72300;
           break;
         default:
@@ -3133,7 +3135,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 72900;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 76700;
           break;
         default:
@@ -3261,7 +3263,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 77100;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 81100;
           break;
         default:
@@ -3389,7 +3391,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 81300;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 85500;
           break;
         default:
@@ -3517,7 +3519,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 85500;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 89900;
           break;
         default:
@@ -3645,7 +3647,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 89700;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 94300;
           break;
         default:
@@ -3773,7 +3775,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 93800;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 98700;
           break;
         default:
@@ -3901,7 +3903,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $cost = 98000;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $cost = 103100;
           break;
         default:
@@ -4035,7 +4037,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $additional_cost = 3800;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $additional_cost = 4000;
           break;
         default:
@@ -4162,7 +4164,7 @@ $(document).ready(function() {
         case($totalWeight < 2000):
           $additional_cost = 2660;
           break;
-        case(2000 <= $totalWeight):
+        case($totalWeight >= 2000):
           $additional_cost = 2800;
           break;
         default:

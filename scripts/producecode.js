@@ -38,7 +38,7 @@ $(document).ready(function() {
     }); */
      
     // 表面加工
-    $(".表面処理").on('click', 'li a', function(){
+    $("li.表面処理").on('click', function(){
          $company = $(this).data('id');
     });
  
