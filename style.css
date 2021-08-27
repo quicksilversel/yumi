@@ -177,10 +177,6 @@ table th {
     margin: 0.5rem;
 }
 
-.condition a.active {
-    font-weight: 600;
-}
-
 .dropdown .btn {
     text-decoration: none;
 }
@@ -192,6 +188,10 @@ input[class="form-control"] {
 .dropdown-menu {
     height: 400px;
     overflow-y: auto;
+}
+
+.dropdown-menu li.active {
+    background-color: rgb(230,230,230);
 }
 
 .dropdown-menu li:hover {

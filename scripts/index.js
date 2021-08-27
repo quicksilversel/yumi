@@ -38,7 +38,9 @@ $(document).ready(function() {
     // add active class
     $('.stat').on('click', function() {
         $('.stat').removeClass('active');
+        $('.dropdown-menu li').removeClass('active');
         $(this).addClass('active');
+        $(this).parent().addClass('active');
     }); 
 
     // toggler
