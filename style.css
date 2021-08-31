@@ -46,7 +46,7 @@ nav {
     padding: 0.5% 3%;
 } 
 
-input[type="submit"]:hover {
+.submit-button-simple input[type="submit"]:hover {
     color: white;
     background-color: black;
 }   
@@ -78,7 +78,7 @@ originally from : https://codepen.io/Ma5a/pen/bGgxaYy */
     margin-bottom: 2rem;
 }
 
-.submit-button {
+.panda-submit-button {
     width: 150px;
     padding: 10px 14px;
     display: flex;
@@ -94,7 +94,7 @@ originally from : https://codepen.io/Ma5a/pen/bGgxaYy */
     transition: 0.3s;
 }
 
-.submit-button:hover {
+.panda-submit-button:hover {
     border-width:2px 2px 4px 2px;
     margin-top: 3px;
 }
