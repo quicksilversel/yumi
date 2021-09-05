@@ -20,7 +20,7 @@ $(document).ready(function() {
     var $additional = '';
     var $additional_cost = 0;
     var $totalCost = 0;
-    var lastClass = -1;
+    var $lastClass = -1;
 
     // get 商品
     $(".dropdown-menu.商品 li").on('click', function(){
@@ -49,17 +49,17 @@ $(document).ready(function() {
       'dark_brown'
     ];
 
-    var nextClass = Math.floor(Math.random() * 5);
+    var $nextClass = Math.floor(Math.random() * 5);
 
     // ensures no repeat
-    while (nextClass === lastClass) {
-      var nextClass = Math.floor(Math.random() * 5);
+    while ($nextClass === $lastClass) {
+      var $nextClass = Math.floor(Math.random() * 5);
     }
 
     $('.panda_icon_random').removeClass('blue green pink brown dark_brown')
-    .addClass(colorVariations[nextClass]);
+    .addClass(colorVariations[$nextClass]);
 
-    lastClass = nextClass;
+    $lastClass = $nextClass;
     /* panda button end */
 
     // input values
