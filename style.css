@@ -5,6 +5,12 @@ body {
     text-decoration: none;
 }
 
+/* 
+.dark-mode {
+    background-color:#121212;
+    color: #f6f6f6;
+} */
+
 a {
     text-decoration: none;
     color: black;
