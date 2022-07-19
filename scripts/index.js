@@ -21,14 +21,6 @@ $(document).ready(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
-
-    /**************** Dropdown end ****************/
-
-    // toggler
-    $("#toggle").on('click', function() {
-        $(this).toggleClass("on");
-        $("#menu").slideToggle();
-    });    
 });
 
 /**************** Dark Mode Toggler ****************/
