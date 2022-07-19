@@ -5,11 +5,11 @@ body {
     text-decoration: none;
 }
 
-/* 
+
 .dark-mode {
     background-color:#121212;
     color: #f6f6f6;
-} */
+} 
 
 a {
     text-decoration: none;
@@ -149,16 +149,19 @@ table th {
 }
 
 input[class="form-control"] {
-    margin-bottom: 1rem;
+    margin-top:0px;
+    margin-bottom: 2px;
+    border-radius: 0%;
 }
 
 .dropdown-menu {
-    height: 400px;
     overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .dropdown-menu li {
     cursor: pointer;
+    padding: 2px;
 }
 
 .dropdown-menu li.active {
@@ -167,12 +170,6 @@ input[class="form-control"] {
 
 .dropdown-menu li:hover {
     background-color: rgb(230,230,230);
-}
-
-.dropdown-menu.表面処理, .dropdown-menu.中分類{
-    height: 200px;
-    overflow-y: auto;
-
 }
 
 /* toggle menu */

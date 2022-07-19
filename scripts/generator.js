@@ -1,7 +1,8 @@
-//  functions for code generator
+// Code generator page functions
+
 $(document).ready(function() {
 
-    // press enter to submit
+    // press enter to click submit button
     $('html').keypress(function (e) {
         var key = e.which;
         if(key == 13)  // the enter key code
@@ -11,7 +12,7 @@ $(document).ready(function() {
          }
     });   
 
-    /*********** generator ***********/
+    /**************** Generator ****************/
 
     // global variables
     var $yobi, $naikei, $gaikei, $atsumi, $company = '';
@@ -48,14 +49,17 @@ $(document).ready(function() {
             result = result.filter(obj => obj.atsumi == $atsumi)
         }
 
+        // if company is not selected
         if($company == ''){
             $('.result-table tbody').html('');
             $('.code-before').html('表面加工を選んでください。');
         }
+        // if no result found
         else if(result.length == 0){
             $('.result-table tbody').html('');
             $('.code-before').html('該当の部品がありません。');
         }
+        // success
         else{
             $('.code-before').html('');
             $('.result-table tbody').html('');
@@ -63,6 +67,5 @@ $(document).ready(function() {
                 $(".result-table tbody").append("<tr><td style=\"width: 30%;\">" + result[i].code + "</td><td style=\"width: 30%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td></tr>")
             };
         }
-        
      });
 });

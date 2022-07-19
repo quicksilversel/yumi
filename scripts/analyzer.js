@@ -1,7 +1,8 @@
-//  functions for code analyzer
+// Code analyzer functions
+
 $(document).ready(function() {
 
-    // press enter to submit
+    // press enter to click submit button
     $('html').keypress(function (e) {
         var key = e.which;
         if(key == 13)  // the enter key code
@@ -11,7 +12,7 @@ $(document).ready(function() {
         }
     });   
 
-    /*********** analyzer ***********/
+    /**************** Analzyer ****************/
 
     // global variables
     var $code, $name, $yobi, $naikei, $gaikei, $atsumi = '';
@@ -36,15 +37,17 @@ $(document).ready(function() {
             }
         };
 
+        // if input is empty
         if($code == ''){
             $('.result-row').html('');
             $('.analyzer-before').html('コードを入力してください。');
         }
-
+        // if no result found
         if(result == ''){
             $('.result-row').html('');
             $('.analyzer-before').html('該当の部品がありません。');
         }
+        // success
         else{
             $(".analyzer-before").html('');
             $(".result-row").html("<td style=\"width: 40%;\">" + $name + "</td><td style=\"width: 15%;\">" + $yobi + "</td><td style=\"width: 15%;\">" + $naikei + "</td><td style=\"width: 15%;\">" + $gaikei + "</td><td style=\"width: 15%;\">" + $atsumi + "</td>")
