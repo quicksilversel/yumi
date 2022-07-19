@@ -11,19 +11,10 @@ $(document).ready(function() {
         }
     });   
 
+    /*********** analyzer ***********/
+
     // global variables
     var $code, $name, $yobi, $naikei, $gaikei, $atsumi = '';
-
-    var data = [];
-     
-    // fetch data from local json file
-    fetch('codedata.json')
-    .then(response => response.json())
-    .then(json => {
-         for(var i in json)
-             data.push(json[i]);
-    })
-    .catch(error => console.log(error));
 
     // return product
     $("#get-product").on("click", function() {
@@ -44,6 +35,12 @@ $(document).ready(function() {
                 $atsumi = data[i].atsumi
             }
         };
+
+        if($code == ''){
+            $('.result-row').html('');
+            $('.analyzer-before').html('コードを入力してください。');
+        }
+
         if(result == ''){
             $('.result-row').html('');
             $('.analyzer-before').html('該当の部品がありません。');
