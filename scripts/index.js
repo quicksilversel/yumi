@@ -22,6 +22,20 @@ $(document).ready(function() {
         });
     });
 
+    $("#shippingfee-product-search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".商品 li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+    $("#shippingfee-destination-search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".行き先 li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
     //identify the toggle switch HTML element
     const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
 
