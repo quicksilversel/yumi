@@ -15,7 +15,7 @@
     <script type="text/javascript" src="scripts/spreadsheet.js"></script>
     <script type="text/javascript" src="scripts/generator.js"></script>
     <!-- css -->
-    <link href="style.css" type="text/css", rel="stylesheet">
+    <link href="css/style.css" type="text/css", rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/65a65454b1.js" crossorigin="anonymous"></script>
     <!-- google fonts -->
@@ -49,12 +49,13 @@
                 </div>
               </li>
           </ul>
-          <!-- switch to dark mode 
+          <!-- dark mode toggler -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <button onclick="switchMode()"><i class="fa fa-adjust mr-2"></i>Switch Mode</button>
-            </li>
-          </ul> -->
+            <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+                <input type="checkbox" id="checkbox-theme">
+                <label for="checkbox-theme" class="fas"></label>
+            </label>
+          </ul> 
         </div>
     </nav>
     <!-- header -->

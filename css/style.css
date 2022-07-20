@@ -4,6 +4,17 @@
     --border: #cccccc;
     --table-header : #e6e6e6;
 	--primary-text: #000000;
+    --secondary-text: #212121;
+}
+
+/* dark mode */
+[data-theme="dark"] {
+    --background: #121212;
+    --card: #181818;
+    --border: #212121;
+    --table-header : #212121;
+    --primary-text: #f6f6f6;
+    --secondary-text: #9CA3AF;
 }
 
 body {
@@ -12,12 +23,6 @@ body {
     color: var(--primary-text);
     text-decoration: none;
 }
-
-
-.dark-mode {
-    background-color:#121212;
-    color: var(--background);
-} 
 
 a {
     text-decoration: none;
@@ -32,9 +37,43 @@ a:hover {
     min-height: 90vh;
 }
 
+input[type="text"] {
+    background-color: var(--table-header);
+    color: var(--primary-text);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+}
+
 /* navbar */
 nav {
     text-transform: capitalize;
+}
+
+.dropdown-item {
+    color: var(--primary-text);
+}
+
+nav .dropdown-item:hover {
+    background-color: var(--table-header);
+    color: var(--primary-text);
+}
+
+/* dark mode toggler */
+
+#checkbox-theme {
+    display: none;
+}
+
+/* light mode icon */
+#checkbox-theme + label:before {
+    content: "\f186";
+    cursor: pointer;
+}
+
+/* dark mode icon */
+#checkbox-theme:checked + label:before {
+    content: "\f185";
+    cursor: pointer;
 }
 
 /* submit button */
@@ -108,10 +147,6 @@ td button, td input, td .option {
     margin: 1rem;
 }
 
-.dropdown-menu input {
-    margin: 0;
-}
-
 /* header */
 
 #header {
@@ -147,6 +182,11 @@ table th {
     margin: 0.5rem;
 }
 
+button {
+    background-color: var(--table-header);
+    color: var(--primary-text)
+}
+
 .dropdown .btn {
     text-decoration: none;
 }
@@ -158,6 +198,7 @@ input[class="form-control"] {
 }
 
 .dropdown-menu {
+    background: var(--card);
     overflow-y: auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
