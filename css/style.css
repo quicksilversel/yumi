@@ -148,11 +148,11 @@ td button, td .option, td input {
     margin: 1rem;
 }
 
-.result-row td:first-child {
+.result-row.generator td:first-child {
     cursor: pointer;
 }
 
-.result-row td:first-child:hover::after {
+.result-row.generator td:first-child:hover::after {
     font-family: "Font Awesome 5 Free"; 
     content: "\f24d";
     margin: 5px;
