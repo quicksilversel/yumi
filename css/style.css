@@ -5,6 +5,7 @@
     --table-header : #e6e6e6;
 	--primary-text: #000000;
     --secondary-text: #212121;
+    --accent: #0275d8;
 }
 
 /* dark mode */
@@ -147,6 +148,29 @@ td button, td .option, td input {
     margin: 1rem;
 }
 
+.result-row td:first-child {
+    cursor: pointer;
+}
+
+.result-row td:first-child:hover::after {
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f24d";
+    margin: 5px;
+}
+
+
+/******************** ALERT MESSAGE ********************/
+
+#alertMessage {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    padding: 8px;
+    border-radius : 5px;
+    background-color: var(--accent);
+    color: var(--primary-text);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
 
 /* header */
 

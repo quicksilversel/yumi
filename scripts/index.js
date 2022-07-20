@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    /**************** Dropdown start ****************/
+    /**************** Dropdowns ****************/
 
     // change text of dropdown to selected item
     $(".dropdown-menu").on('click', 'li', function(){
@@ -36,10 +36,10 @@ $(document).ready(function() {
         });
     });
 
+    /**************** Dark Mode ****************/
+
     //identify the toggle switch HTML element
     const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
-
-    /**************** Dark Mode ****************/
 
     // determines if the user has a set theme
     function detectColorScheme(){

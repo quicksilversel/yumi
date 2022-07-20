@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+    $("#alertMessage").hide();
+
     // press enter to click submit button
     $('html').keypress(function (e) {
         var key = e.which;
@@ -11,6 +13,17 @@ $(document).ready(function() {
            return false;  
          }
     });   
+
+    // copy code
+
+	$(".result-row").on("click", ".productCode", function(e){
+		var copyText = $(this).text();
+		navigator.clipboard.writeText(copyText).then(() => {
+			// Alert the user that the action took place.
+			$("#alertMessage").show();
+            setTimeout(function(){$("#alertMessage").hide()}, 3000)
+		});
+	});
 
     /**************** Generator ****************/
 
@@ -64,7 +77,7 @@ $(document).ready(function() {
             $('.code-before').html('');
             $('.result-table tbody').html('');
             for (var i = 0, len = result.length; i < len; i++) {
-                $(".result-table tbody").append("<tr><td style=\"width: 30%;\">" + result[i].code + "</td><td style=\"width: 30%;\">" + result[i].name + "</td><td style=\"width: 10%;\">" + result[i].yobi + "</td><td style=\"width: 10%;\">" + result[i].naikei + "</td><td style=\"width: 10%;\">" + result[i].gaikei + "</td><td style=\"width: 10%;\">" + result[i].atsumi + "</td></tr>")
+                $(".result-table tbody").append(`<tr><td class="productCode" style="width: 30%;">${result[i].code}</td><td style="width: 30%;">${result[i].name}</td><td style="width: 10%;">${result[i].yobi}</td><td style="width: 10%;">${result[i].naikei}</td><td style="width: 10%;">${result[i].gaikei}</td><td style="width: 10%;">${result[i].atsumi}</td></tr>`)
             };
         }
      });
