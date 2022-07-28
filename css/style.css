@@ -121,6 +121,45 @@ button.copy {
     padding: 0.5% 3%;
 }
 
+/* button style 2 : panda button
+originally from : https://codepen.io/Ma5a/pen/bGgxaYy */
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.panda-submit-button {
+    width: 150px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(131, 88, 59);
+    border-width:2px 2px 7px 2px;
+    border-radius: 10px;
+    background-color: rgb(83, 39, 9);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.panda-submit-button:hover {
+    border-width:2px 2px 4px 2px;
+    margin-top: 3px;
+}
+
+.panda_white { fill: white; }
+.blue { fill: #12b7e9; }
+.green { fill: rgb(43, 163, 113); }
+.pink { fill: hotpink;}
+.brown { fill: rgb(126, 80, 62);}
+.dark_brown { fill: rgb(53, 34, 27);}
+
 input[type="submit"] {
     border: none;
     background-color: transparent;
@@ -130,6 +169,10 @@ input[type="submit"] {
     font-family: "Press Start 2P", sans-serif;
     font-size: 12px;
     cursor: pointer;    
+}
+
+.panda-submit-button input {
+    color: white;
 }
 
 /* tables */
